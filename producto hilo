@@ -1,0 +1,119 @@
+ESTAS CLASES VAN DENTRO DEL FOLDER HILO
+
+CalculaFactorial.java
+
+public class CalculaFactorial extends Thread {
+
+    Buffer b;
+    int n;
+
+    public Factorial(Buffer b, int n) {
+        // TODO Auto-generated constructor stub
+        this.b = b;
+        this.n = n;
+    }
+
+    @Override
+    public void run() {
+
+        // aqui va tu codigo que calcula el  factorial
+
+    }
+}
+
+CalculaPar.java
+
+public class CalculaPar extends Thread {
+
+    Buffer b;
+    int n;
+
+    public ParImpar(Buffer b, int n) {
+        // TODO Auto-generated constructor stub
+        this.b = b;
+        this.n = n;
+    }
+
+    @Override
+    public void run() {
+
+        //aqui va tu codigo que calcula par o impar
+
+    }
+
+}
+
+CalculaNumPrimo.java
+
+public class CalculaNumPrimo extends Thread {
+
+    Buffer b;
+    int n;
+
+    public Primo(Buffer b, int n) {
+        // TODO Auto-generated constructor stub
+        this.b = b;
+        this.n = n;
+    }
+
+    @Override
+    public void run() {
+
+        int i = 2, primo = 0;
+
+        while (i <= n / 2 && primo == 0) {
+            if (n % i == 0) {
+                primo = 1;
+            }
+            i++;
+        }
+
+        if (primo == 0 && n != 1) {
+            System.out.println("El número " + this.n + " es primo");
+        } else {
+            System.out.println("El número " + this.n + " no es primo");
+        }
+
+    }
+}
+
+CalculaSerie.java
+
+public class CalculaSerie extends Thread {
+
+    Buffer b;
+    int n;
+
+    public Serie(Buffer b, int n) {
+        // TODO Auto-generated constructor stub
+        this.b = b;
+        this.n = n;
+    }
+
+    @Override
+    public void run() {
+
+        //aqui va tu codigo que calcula la serie de fibonacci
+    }
+
+}
+
+CalculaSuma.java
+
+public class CalculaSuma extends Thread {
+
+    Buffer b;
+    int n;
+
+    public Suma(Buffer b, int n) {
+        // TODO Auto-generated constructor stub
+        this.b = b;
+        this.n = n;
+    }
+
+    @Override
+    public void run() {
+
+        //aqui va tu codigo que calcula la sumatoria
+    }
+}
